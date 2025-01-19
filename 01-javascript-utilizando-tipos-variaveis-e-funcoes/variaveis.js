@@ -1,6 +1,6 @@
-let estudante = "Caroline";
-let professora = "Ana";
+const estudante = "Caroline";
+let professora;
 
-estudante = "Mariana";
+professora = "Ana"
 
 console.log(estudante, professora);
