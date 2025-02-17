@@ -1,11 +1,12 @@
-function contaPalavras(texto) {
+export function contaPalavras(texto) {
   const paragrafos = extraiParagrafos(texto);
   const contagem = paragrafos.flatMap((paragrafo) => {
     if (!paragrafo) return [];
     return verificaPalavrasDuplicadas(paragrafo);
   });
 
-  console.log(contagem);
+  return contagem;
+  //console.log(contagem);
 }
 
 function extraiParagrafos(texto) {
