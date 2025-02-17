@@ -13,7 +13,7 @@ fs.readFile(link, "utf-8", (erro, texto) => {
     const resultado = contaPalavras(texto);
     criaESalvaArquivo(resultado, endereco);
   } catch (erro) {
-    console.log(trataErros(erro));
+    trataErros(erro);
   }
 });
 
@@ -22,7 +22,7 @@ async function criaESalvaArquivo(listaPalavras, endereco) {
   const textoPalavras = montaSaidaArquivo(listaPalavras);
   try {
     await fs.promises.writeFile(arquivoNovo, textoPalavras);
-    console.log("Arquivo criado");
+    console.log("arquivo criado");
   } catch (erro) {
     throw erro;
   }
