@@ -1,9 +1,10 @@
 import fs from "fs";
 import path from "path";
+import chalk from "chalk";
+import { Command } from "commander";
 import trataErros from "./erros/funcoesErro.js";
 import { contaPalavras } from "./index.js";
 import { montaSaidaArquivo } from "./helpers.js";
-import { Command } from "commander";
 
 const program = new Command();
 
@@ -18,7 +19,9 @@ program
     const { texto, destino } = options;
 
     if (!texto || !destino) {
-      console.error("Erro: favor inserir caminho de origem e destino");
+      console.error(
+        chalk.red("Erro: favor inserir caminho de origem e destino")
+      );
       program.help();
       return;
     }
@@ -28,7 +31,7 @@ program
 
     try {
       processaArquivo(caminhoTexto, caminhoDestino);
-      console.log("Texto processado com sucesso");
+      console.log(chalk.green("Texto processado com sucesso"));
     } catch (error) {
       console.log("Ocorreu um erro", error);
     }
