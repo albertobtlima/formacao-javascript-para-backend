@@ -12,8 +12,31 @@ export default class User {
     this.#ativo = ativo;
   }
 
+  get nome() {
+    return this.#nome;
+  }
+  get email() {
+    return this.#email;
+  }
+  get nascimento() {
+    return this.#nascimento;
+  }
+  get role() {
+    return this.#role;
+  }
+  get ativo() {
+    return this.#ativo;
+  }
+
+  set nome(novoNome) {
+    if (novoNome === "") {
+      throw new Error("Nome inválido");
+    }
+    this.#nome = novoNome;
+  }
+
   exibirInfos() {
-    return `${this.#nome}, ${this.#email}`;
+    return `${this.nome}, ${this.email}`;
   }
 }
 
