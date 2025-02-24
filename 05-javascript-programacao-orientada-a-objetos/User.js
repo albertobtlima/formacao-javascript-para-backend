@@ -35,8 +35,18 @@ export default class User {
     this.#nome = novoNome;
   }
 
+  // exibirInfos() {
+  //   return `${this.nome}, ${this.email}`;
+  // }
+
   exibirInfos() {
-    return `${this.nome}, ${this.email}`;
+    if (this.role === "estudante") {
+      return `Dados estudante: ${this.nome}, ${this.email}`;
+    } else if (this.role === "admin") {
+      return `Dados admin: ${this.nome}, ${this.role}`;
+    } else if (this.role === "docente") {
+      return `Dados docente: ${this.nome}, ${this.role}`;
+    }
   }
 }
 
