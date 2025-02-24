@@ -48,6 +48,10 @@ export default class User {
       return `Dados docente: ${this.nome}, ${this.role}`;
     }
   }
+
+  static exibirInfosGenericas(nome, email) {
+    return `Dados: ${nome}, ${email}`;
+  }
 }
 
 const novoUser = new User("Madruga", "m@m.com", "1990-01-01");

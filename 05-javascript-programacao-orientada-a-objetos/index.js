@@ -12,3 +12,6 @@ console.log(novoAdmin.exibirInfos());
 
 const novoDocente = new Docente("Professor Girafales", "p@g.com", "1950-01-01");
 console.log(novoDocente.exibirInfos());
+
+const dadosFicticios = User.exibirInfosGenericas("Godines", "g@g.com");
+console.log(dadosFicticios);
