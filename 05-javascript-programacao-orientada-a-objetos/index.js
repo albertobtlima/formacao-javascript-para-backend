@@ -9,3 +9,6 @@ console.log(novoUser.nome);
 
 // const novoAdmin = new User("Clotilde", "c@c.com", "1970-01-01");
 // console.log(novoAdmin.nome);
+
+const novoAdmin = new Admin("Sr. Barriga", "1960-01-01");
+console.log(novoAdmin.exibirInfos());
