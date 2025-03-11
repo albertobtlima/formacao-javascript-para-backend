@@ -11,6 +11,8 @@ Planos de estudo com essa formação:
 
 **Full-stack JavaScript: do zero ao avançado**
 
+Está é a 3ª formação da **Full-stack JavaScript: do zero ao avançado**
+
 ---
 
 Lista de Cursos:
